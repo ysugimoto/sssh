@@ -1,15 +1,21 @@
 # sssh
-Execute SSH to selected host from .ssh/config
+Execute SSH to selected host from `.ssh/config`.
+
+This project includes a couple of commands:
+
+- `sssh`
+- `ssscp`
 
 # Installation
 
 ```
-$ go get github.com/ysugimoto/sssh/...
+$ go get github.com/ysugimoto/sssh/cmd/sssh/...`
+$ go get github.com/ysugimoto/sssh/cmd/ssscp/...`
 ```
 
 # Usage
 
-Simply type `sssh`
+Simply type `sssh` or `ssscp` and follow the CLI message.
 
 # Author
 
