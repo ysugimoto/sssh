@@ -1,4 +1,0 @@
-package: github.com/ysugimoto/sssh
-import:
-- package: github.com/mitchellh/go-homedir
-- package: github.com/ysugimoto/cho

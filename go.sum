@@ -1,0 +1,13 @@
+github.com/mattn/go-colorable v0.0.0-20170811043054-6df6d4d004b6 h1:/MxK5074UXZalLmf4T93crUVOdq0P1VX250umbSx2jc=
+github.com/mattn/go-colorable v0.0.0-20170811043054-6df6d4d004b6/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
+github.com/mattn/go-isatty v0.0.1 h1:CUzGjDU3sTrdhXv9lYvVXq04SYzwkvgm46qjB0T7jGM=
+github.com/mattn/go-isatty v0.0.1/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
+github.com/mattn/go-runewidth v0.0.2 h1:UnlwIPBGaTZfPQ6T1IGzPI0EkYAQmT9fAEJ/poFC63o=
+github.com/mattn/go-runewidth v0.0.2/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
+github.com/mattn/go-tty v0.0.0-20170729114804-3d41f42f6006 h1:ImU2om7rFUGvTI4kvtIZAXOj5WinGWxtETx0nG/SxZo=
+github.com/mattn/go-tty v0.0.0-20170729114804-3d41f42f6006/go.mod h1:XPvLUNfbS4fJH25nqRHfWLMa1ONC8Amw+mIA639KxkE=
+github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747 h1:eQox4Rh4ewJF+mqYPxCkmBAirRnPaHEB26UkNuPyjlk=
+github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
+github.com/ysugimoto/cho v0.0.0-20170812055112-632f8dafec3b h1:+V+5zu5UzzJ31aE0EDUGwCL7Uby3ochUBrd77fPHsIk=
+github.com/ysugimoto/cho v0.0.0-20170812055112-632f8dafec3b/go.mod h1:cZu1U2ZQMW0c1DyOc4qJSaihe7hLjF2XcEOkHFkliiY=
+golang.org/x/sys v0.0.0-20170809190605-e42485b6e20a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
