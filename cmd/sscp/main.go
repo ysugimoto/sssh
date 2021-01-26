@@ -72,11 +72,18 @@ func _main() error {
 	if host == nil {
 		return errors.New("host not found")
 	}
-	remote, local := getPathsFromInput(host)
+
+	var remote, local string
 	var cmd *exec.Cmd
 	if !upload {
+		fmt.Println("==== Download Mode (remote -> local) ====")
+		remote = getRemotePath(host)
+		local = getLocalPath()
 		cmd = exec.Command("scp", host.Name+":"+remote, local)
 	} else {
+		fmt.Println("==== Upload Mode (local -> remote) ====")
+		local = getLocalPath()
+		remote = getRemotePath(host)
 		cmd = exec.Command("scp", local, host.Name+":"+remote)
 	}
 	cmd.Stdin = os.Stdin
@@ -101,8 +108,8 @@ func command(h *sssh.Host) string {
 	return strings.Join(c, " ")
 }
 
-func getPathsFromInput(host *sssh.Host) (string, string) {
-	var remote, local string
+func getRemotePath(host *sssh.Host) string {
+	var remote string
 	for {
 		fmt.Printf("Remote [%s@%s]: ", host.User, host.HostName)
 		fmt.Scanln(&remote)
@@ -112,8 +119,14 @@ func getPathsFromInput(host *sssh.Host) (string, string) {
 		}
 		break
 	}
+	return strings.ReplaceAll(remote, " ", "\\ ")
+}
+
+func getLocalPath() string {
+	var local string
+	wd, _ := os.Getwd()
 	for {
-		fmt.Print("Local: ")
+		fmt.Printf("Local [%s]: ", wd)
 		fmt.Scanln(&local)
 		local = strings.TrimSpace(local)
 		if local == "" {
@@ -121,5 +134,5 @@ func getPathsFromInput(host *sssh.Host) (string, string) {
 		}
 		break
 	}
-	return strings.ReplaceAll(remote, " ", "\\ "), strings.ReplaceAll(local, " ", "\\ ")
+	return strings.ReplaceAll(local, " ", "\\ ")
 }
